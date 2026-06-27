@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -93,8 +93,8 @@ export default function RootLayout({
       </head>
       <body className="bg-gradient-animated min-h-screen flex flex-col">
         <ThemeProvider>
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <Navbar />
+          <main className="flex-1 pt-24">{children}</main>
         </ThemeProvider>
       </body>
     </html>
